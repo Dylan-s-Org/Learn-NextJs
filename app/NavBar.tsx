@@ -12,7 +12,12 @@ const NavBar = () => {
         Next.js
       </Link>
       {status === "authenticated" && (
-        <Link href="/users">{session.user!.name}</Link>
+        <>
+          {session.user!.name}
+          <Link href={"/api/auth/signout"} className="ml-3">
+            Sign Out
+          </Link>
+        </>
       )}
       {status === "unauthenticated" && (
         <Link href="/api/auth/signin">Login</Link>
