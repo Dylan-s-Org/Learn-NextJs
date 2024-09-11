@@ -1,25 +1,27 @@
-import React from "react";
 import {
-  Html,
   Body,
   Container,
-  Text,
+  Html,
   Link,
   Preview,
+  Tailwind,
+  Text,
 } from "@react-email/components";
 
 const WelcomeTemplates = ({ name }: { name: string }) => {
   return (
     <Html>
       <Preview>Welcome aboard!</Preview>
-      <Body>
-        <Container>
-          <Text>Hello {name}</Text>
-          <Link href="https://minhhuy11022000.github.io/dylanresume/">
-            Here is my Resume
-          </Link>
-        </Container>
-      </Body>
+      <Tailwind>
+        <Body className="bg-white">
+          <Container>
+            <Text className="font-bold text-3xl">Hello {name}</Text>
+            <Link href="https://minhhuy11022000.github.io/dylanresume/">
+              Here is my Resume
+            </Link>
+          </Container>
+        </Body>
+      </Tailwind>
     </Html>
   );
 };
