@@ -15,6 +15,7 @@ jobs:
 
     env:
       NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }} # Use GitHub Secrets
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }} # Use GitHub Secrets
 
     strategy:
       matrix:
