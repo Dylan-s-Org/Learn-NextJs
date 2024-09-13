@@ -2,6 +2,14 @@
 const path = require("path");
 const { NormalModuleReplacementPlugin } = require("webpack");
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "bit.ly",
+      },
+    ],
+  },
   webpack: (
     config,
     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
